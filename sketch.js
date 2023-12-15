@@ -8,24 +8,20 @@ let steps_required = 0;
 let upper_bound_of_integral;
 let lower_bound_of_integral;
 
-let image;
+let img;
 
 function preload()
 {
-    img = loadImage('assets/new.png');
-}
+    //img = loadImage("./\assets/new.png");
 
+}
 function setup() {
 
-    
-    image(img,0, 0);
-    
-
-    console.log("Het");
+    createCanvas(windowWidth, windowHeight);
     
     calculate_lowest = createButton("Υπολόγισε ελάχιστο:"); 
     calculate_lowest.mouseClicked(calculate_minimum);
-    calculate_lowest.position(windowWidth / 2, windowHeight / 2);
+    calculate_lowest.position(windowWidth / 7.5, windowHeight / 2.5);
 
     calculate_lowest.style("padding", '10px');
     calculate_lowest.style("border", "none");
@@ -35,18 +31,20 @@ function setup() {
     upper_input = createInput(''); 
     upper_input.input(handle_upper_input); 
 
-    upper_input.position(windowWidth / 2, windowHeight / 4);
+    upper_input.position(windowWidth / 2.4, windowHeight / 6);
 
     upper_input.style("border", '3px solid black');
+    upper_input.style("padding", '10px');
 
     lower_input = createInput(''); 
     lower_input.input(handle_lower_input); 
 
-    lower_input.position(windowWidth / 2,  windowHeight / 2.5);
+    lower_input.position(windowWidth / 4,  windowHeight / 3.5);
 
     lower_input.style("border", '3px solid black');
-}
+    lower_input.style("padding", '10px');
 
+}
 
 function calculate_minimum()
 {
@@ -63,12 +61,16 @@ function handle_lower_input()
 }
 
 function draw() {
-    fill(200, 200, 200);
+
+    background(10, 10, 40);
 
     textSize(20);
-    strokeWeight(0.01);
-    
-    text("Ποιο είναι το πάνω όριο του ολοκληρώματος;", 200, 100);  
 
-    text("Και ποιο το κάτω;", 200, 2.5 * 300);  
+    fill(200, 200, 200);    
+    
+    stroke('white');
+
+    text("Ποιο είναι το πάνω όριο του ολοκληρώματος;", 2 * windowWidth / 15, windowHeight / 6 + 28);  
+
+    text("Και ποιο το κάτω;", 2 * windowWidth / 15, windowHeight / 3.5 + 28);  
 }
