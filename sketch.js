@@ -12,7 +12,7 @@ let img;
 
 function preload()
 {
-    img = loadImage("./\assets/new.png");
+    img = loadImage("assets/new.png");
 
 }
 function setup() {
