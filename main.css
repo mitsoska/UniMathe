@@ -1,0 +1,41 @@
+* {
+  color: white;
+}
+
+main {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  padding: 20px;
+  color: white;
+}
+
+body {
+  background-color: rgb(20, 20, 30);
+}
+input {
+  width: 50%;
+  margin-left: 20px;
+  border: 2px dotted grey;
+  background-color: black;
+  color: white;
+}
+
+button {
+  display: inline-block;
+  
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  
+  padding: 10px;
+  
+  margin-left: 20px;
+  margin-top: 30px;
+}
