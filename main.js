@@ -13,7 +13,7 @@ function calculate_least() {
 
     let result2 = (-60 * ( Math.cos(input1) - Math.cos(input2) ) * (Math.sin(input1) - Math.sin(input2)) * (input1 - input2)) / ( (-12 * Math.pow( (input1 - input2), 2) + 25 * Math.pow( (Math.sin(input1) - Math.sin(input2)), 2)) * 5 * (Math.sin(input1) - Math.sin(input2)));
 
-    let result3 = Math.pow(result1, 2) * (input1 - input2) + 3 * Math.pow(result2,  2) * (input1 - input2) + ( Math.pow(input1 - input2, 2) ) / 2 + 5 * result1 * result2 * (Math.sin(input1) - Math.sin(input2)) - 6 * result2 * (Math.cos(input1) - Math.cos(input2));
+    let result3 = Math.pow(result1, 2) * (input1 - input2) + 3 * Math.pow(result2,  2) * (input1 - input2) + ( Math.pow(input1, 2) - Math.pow(input2, 2) ) / 2 + 5 * result1 * result2 * (Math.sin(input1) - Math.sin(input2)) - 6 * result2 * (Math.cos(input1) - Math.cos(input2));
 
     answer1.innerHTML = "x = " + result1;
     answer2.innerHTML = "y = " + result2;
